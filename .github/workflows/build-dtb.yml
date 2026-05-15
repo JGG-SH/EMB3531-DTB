@@ -32,7 +32,7 @@ jobs:
           cpp -nostdinc -I include -I arch/arm64/boot/dts -I arch/arm64/boot/dts/rockchip -undef -x assembler-with-cpp arch/arm64/boot/dts/rockchip/emb-3531-armbian.dts | dtc -I dts -O dtb -o emb-3531-armbian.dtb -
       
       - name: Upload DTB artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: emb-3531-armbian-dtb
           path: linux-6.6/emb-3531-armbian.dtb
